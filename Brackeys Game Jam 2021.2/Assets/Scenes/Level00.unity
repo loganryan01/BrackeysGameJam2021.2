@@ -1485,6 +1485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  nextScene: {fileID: 102900000, guid: 9fac27e65655fc343a370451c983ff77, type: 3}
 --- !u!1 &1142846256
 GameObject:
   m_ObjectHideFlags: 0
