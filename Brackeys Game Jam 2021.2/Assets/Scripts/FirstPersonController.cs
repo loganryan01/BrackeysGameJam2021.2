@@ -8,6 +8,7 @@ public class FirstPersonController : MonoBehaviour
     public float speed;
     public float jumpForce;
     public float rotateSpeed;
+    public GameObject playerCamera;
     
     private Keyboard keyboard;
     private Rigidbody rb;
@@ -24,6 +25,7 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        // Jump
         if (keyboard.spaceKey.wasPressedThisFrame && isGrounded)
         {
             isGrounded = false;
@@ -53,15 +55,19 @@ public class FirstPersonController : MonoBehaviour
             rb.MovePosition(move);
         }
 
-        // Jump
-        //if (keyboard.spaceKey.wasPressedThisFrame && isGrounded)
-        //{
-        //    isGrounded = false;
-        //    Vector3 jump = new Vector3(0, jumpForce, 0);
-        //    rb.AddForce(jump, ForceMode.Impulse);
-        //}
-
         // Rotation
+        if (keyboard.qKey.isPressed)
+        {
+            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x + (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
+            playerCamera.transform.Rotate(rotate);
+        }
+
+        if (keyboard.eKey.isPressed)
+        {
+            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x - (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
+            playerCamera.transform.Rotate(rotate);
+        }
+
         if (keyboard.aKey.isPressed)
         {
             Quaternion rotate = Quaternion.Euler(0, transform.rotation.eulerAngles.y - (rotateSpeed * Time.deltaTime), 0);
