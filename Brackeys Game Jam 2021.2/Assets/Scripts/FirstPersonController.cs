@@ -22,6 +22,16 @@ public class FirstPersonController : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        if (keyboard.spaceKey.wasPressedThisFrame && isGrounded)
+        {
+            isGrounded = false;
+            Vector3 jump = new Vector3(0, jumpForce, 0);
+            rb.AddForce(jump, ForceMode.Impulse);
+        }
+    }
+
     void FixedUpdate()
     {
         if (keyboard == null)
@@ -44,12 +54,12 @@ public class FirstPersonController : MonoBehaviour
         }
 
         // Jump
-        if (keyboard.spaceKey.wasPressedThisFrame && isGrounded)
-        {
-            isGrounded = false;
-            Vector3 jump = new Vector3(0, jumpForce, 0);
-            rb.AddForce(jump, ForceMode.Impulse);
-        }
+        //if (keyboard.spaceKey.wasPressedThisFrame && isGrounded)
+        //{
+        //    isGrounded = false;
+        //    Vector3 jump = new Vector3(0, jumpForce, 0);
+        //    rb.AddForce(jump, ForceMode.Impulse);
+        //}
 
         // Rotation
         if (keyboard.aKey.isPressed)
