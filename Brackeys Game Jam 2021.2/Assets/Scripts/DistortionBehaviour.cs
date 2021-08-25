@@ -23,8 +23,7 @@ public class DistortionBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             distortionEffect.enabled = true;
-            filmGrain.intensity.value = 1;
-            filmGrain.response.value = 1;
+            filmGrain.active = true;
 
             StartCoroutine(Transition());
         }
@@ -34,6 +33,7 @@ public class DistortionBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
 
+        filmGrain.active = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
