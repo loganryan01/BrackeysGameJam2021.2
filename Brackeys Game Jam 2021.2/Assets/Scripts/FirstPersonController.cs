@@ -58,14 +58,14 @@ public class FirstPersonController : MonoBehaviour
         // Rotation
         if (keyboard.qKey.isPressed)
         {
-            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x + (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
-            playerCamera.transform.Rotate(rotate);
+            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x - (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
+            playerCamera.transform.Rotate(rotate, Space.World);
         }
 
         if (keyboard.eKey.isPressed)
         {
-            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x - (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
-            playerCamera.transform.Rotate(rotate);
+            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x + (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
+            playerCamera.transform.Rotate(rotate, Space.World);
         }
 
         if (keyboard.aKey.isPressed)
