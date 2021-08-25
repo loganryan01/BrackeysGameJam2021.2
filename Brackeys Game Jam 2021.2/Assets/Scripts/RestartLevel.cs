@@ -24,8 +24,7 @@ public class RestartLevel : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             distortionEffect.enabled = true;
-            filmGrain.intensity.value = 1;
-            filmGrain.response.value = 1;
+            filmGrain.active = true;
 
             StartCoroutine(Transition());
         }

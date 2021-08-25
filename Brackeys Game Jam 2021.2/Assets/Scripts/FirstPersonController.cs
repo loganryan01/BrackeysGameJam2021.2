@@ -8,10 +8,12 @@ public class FirstPersonController : MonoBehaviour
     public float speed;
     public float jumpForce;
     public float rotateSpeed;
+    public float maximumRotation;
     public GameObject playerCamera;
     
     private Keyboard keyboard;
     private Rigidbody rb;
+    private float xAngle = 0;
 
     private bool isGrounded;
     
@@ -56,16 +58,18 @@ public class FirstPersonController : MonoBehaviour
         }
 
         // Rotation
-        if (keyboard.qKey.isPressed)
-        {
-            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x + (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
-            playerCamera.transform.Rotate(rotate);
-        }
-
-        if (keyboard.eKey.isPressed)
+        if (keyboard.qKey.isPressed && xAngle > -maximumRotation)
         {
             Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x - (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
-            playerCamera.transform.Rotate(rotate);
+            playerCamera.transform.Rotate(rotate, Space.World);
+            xAngle -= (rotateSpeed * Time.deltaTime);
+        }
+
+        if (keyboard.eKey.isPressed && xAngle < maximumRotation)
+        {
+            Vector3 rotate = new Vector3(transform.rotation.eulerAngles.x + (rotateSpeed * Time.deltaTime), transform.rotation.eulerAngles.y, 0);
+            playerCamera.transform.Rotate(rotate, Space.World);
+            xAngle += (rotateSpeed * Time.deltaTime);
         }
 
         if (keyboard.aKey.isPressed)

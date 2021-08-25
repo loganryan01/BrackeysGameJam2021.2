@@ -938,7 +938,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1014616990}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -1097,8 +1097,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 963194228}
   - {fileID: 1615648603}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1117,6 +1117,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 5
   rotateSpeed: 20
+  maximumRotation: 30
   playerCamera: {fileID: 963194225}
 --- !u!54 &1014616992
 Rigidbody:
@@ -1784,7 +1785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41962
+  m_Name: pb_Mesh26786
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7952,17 +7953,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615648599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.11}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.2220578, y: 0.2220578, z: 0.2220578}
   m_Children:
   - {fileID: 1144673071}
   m_Father: {fileID: 1014616990}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 3}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 1005, y: 520}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!43 &1655494648
 Mesh:
@@ -7970,7 +7971,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41924
+  m_Name: pb_Mesh26748
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
