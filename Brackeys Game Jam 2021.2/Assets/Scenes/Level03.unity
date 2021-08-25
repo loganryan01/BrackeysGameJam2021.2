@@ -6616,6 +6616,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 5
   rotateSpeed: 20
+  maximumRotation: 30
   playerCamera: {fileID: 963194225}
 --- !u!54 &1014616992
 Rigidbody:
