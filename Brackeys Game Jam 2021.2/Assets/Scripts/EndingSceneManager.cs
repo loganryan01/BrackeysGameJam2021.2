@@ -14,12 +14,13 @@ public class EndingSceneManager : MonoBehaviour
 
     private int index = 0;
     private bool coroutineStarted = false;
-    
+    public AudioBehaviour audioBehaviour;
+
     // Start is called before the first frame update
     void Start()
     {
         volume.profile.TryGet<FilmGrain>(out filmGrain);
-        
+        audioBehaviour = FindObjectOfType<AudioBehaviour>();
     }
 
     // Update is called once per frame
@@ -44,6 +45,7 @@ public class EndingSceneManager : MonoBehaviour
         if (index == canvases.Length - 1)
         {
             filmGrain.active = true;
+            audioBehaviour.PlayVirusSound();
 
             yield return new WaitForSeconds(time);
 

@@ -6242,12 +6242,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d969b548aa99645b0dd4e7d0f37785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.4
   movingPoints:
   - {fileID: 1872452814}
   - {fileID: 1992978210}
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!1 &592796970
 GameObject:
   m_ObjectHideFlags: 0
@@ -6669,12 +6670,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d969b548aa99645b0dd4e7d0f37785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.4
   movingPoints:
   - {fileID: 1975507561}
   - {fileID: 926288471}
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!1 &880114657
 GameObject:
   m_ObjectHideFlags: 0
@@ -7001,12 +7003,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d969b548aa99645b0dd4e7d0f37785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.4
   movingPoints:
   - {fileID: 2002125106}
   - {fileID: 1761339618}
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!1 &948737718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,12 +7435,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d969b548aa99645b0dd4e7d0f37785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.4
   movingPoints:
   - {fileID: 284691796}
   - {fileID: 26741504}
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!1 &997223130
 GameObject:
   m_ObjectHideFlags: 0
@@ -7863,6 +7867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!1 &1116699940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8798,12 +8803,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d969b548aa99645b0dd4e7d0f37785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.4
   movingPoints:
   - {fileID: 1538145892}
   - {fileID: 1517441962}
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!1 &1357889413
 GameObject:
   m_ObjectHideFlags: 0
@@ -15337,12 +15343,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d969b548aa99645b0dd4e7d0f37785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.4
   movingPoints:
   - {fileID: 1685184760}
   - {fileID: 415031966}
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!43 &1655494648
 Mesh:
   m_ObjectHideFlags: 0
@@ -16030,6 +16037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distortionEffect: {fileID: 1144673072}
   volume: {fileID: 1357889414}
+  audioBehaviour: {fileID: 0}
 --- !u!65 &2028320900
 BoxCollider:
   m_ObjectHideFlags: 0

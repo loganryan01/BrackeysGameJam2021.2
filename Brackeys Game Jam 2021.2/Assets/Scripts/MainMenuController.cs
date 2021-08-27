@@ -10,16 +10,21 @@ public class MainMenuController : MonoBehaviour
 {
     public Image distortionEffect;
     public Volume volume;
+    public GameObject mainMenuCanvas;
+    public GameObject optionsScreen;
+    private AudioBehaviour audioBehaviour;
 
     FilmGrain filmGrain;
 
     private void Start()
     {
+        audioBehaviour = FindObjectOfType<AudioBehaviour>();
         volume.profile.TryGet<FilmGrain>(out filmGrain);
     }
 
     public void StartGame()
     {
+        audioBehaviour.PlayVirusSound();
         distortionEffect.enabled = true;
         filmGrain.active = true;
         StartCoroutine(Transition());
@@ -28,6 +33,12 @@ public class MainMenuController : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void OptionsButton()
+    {
+        optionsScreen.SetActive(true);
+        mainMenuCanvas.SetActive(false);
     }
 
     IEnumerator Transition()

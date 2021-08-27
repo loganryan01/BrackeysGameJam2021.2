@@ -12,6 +12,7 @@ public class ParticleBehaviour : MonoBehaviour
     public Transform[] movingPoints;
     public Image distortionEffect;
     public Volume volume;
+    public AudioBehaviour audioBehaviour;
 
     FilmGrain filmGrain;
 
@@ -21,7 +22,7 @@ public class ParticleBehaviour : MonoBehaviour
     void Start()
     {
         volume.profile.TryGet<FilmGrain>(out filmGrain);
-        Debug.Log(movingPoints[0].position);
+        audioBehaviour = FindObjectOfType<AudioBehaviour>();
     }
 
     // Update is called once per frame
@@ -61,9 +62,9 @@ public class ParticleBehaviour : MonoBehaviour
 
     IEnumerator Transition()
     {
+        audioBehaviour.PlayVirusSound();
         distortionEffect.enabled = true;
-        filmGrain.intensity.value = 1;
-        filmGrain.response.value = 1;
+        filmGrain.active = true;
 
         yield return new WaitForSeconds(3);
 

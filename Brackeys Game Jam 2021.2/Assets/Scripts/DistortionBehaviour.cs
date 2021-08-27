@@ -13,9 +13,12 @@ public class DistortionBehaviour : MonoBehaviour
 
     FilmGrain filmGrain;
 
+    public AudioBehaviour audioBehaviour;
+
     private void Start()
     {
         volume.profile.TryGet<FilmGrain>(out filmGrain);
+        audioBehaviour = FindObjectOfType<AudioBehaviour>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +34,7 @@ public class DistortionBehaviour : MonoBehaviour
 
     IEnumerator Transition()
     {
+        audioBehaviour.PlayVirusSound();
         yield return new WaitForSeconds(3);
 
         filmGrain.active = false;

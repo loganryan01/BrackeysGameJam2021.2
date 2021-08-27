@@ -12,11 +12,13 @@ public class RestartLevel : MonoBehaviour
     public Volume volume;
 
     FilmGrain filmGrain;
+    public AudioBehaviour audioBehaviour;
 
     // Start is called before the first frame update
     void Start()
     {
         volume.profile.TryGet<FilmGrain>(out filmGrain);
+        audioBehaviour = FindObjectOfType<AudioBehaviour>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,6 +34,8 @@ public class RestartLevel : MonoBehaviour
 
     IEnumerator Transition()
     {
+        audioBehaviour.PlayVirusSound();
+
         yield return new WaitForSeconds(3);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
